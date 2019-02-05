@@ -17,7 +17,7 @@ pipeline {
     		}
     		steps {
     			script {
-    				app = docker.build("/mulpuruvsdockerid/pipeline-app")
+    				app = docker.build("/jenkins")
     				app.inside {
     					sh 'echo $(curl localhost:8080)'
     				}
